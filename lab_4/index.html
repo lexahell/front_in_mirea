@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кладезь</title>
+    <!-- Подключение фавиконки -->
+    <link rel="icon" type="image/png" href="img/icons8-закрытая-книга-48.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- подключение шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/chest-gold-svgrepo-com.svg" height="60px" width="130px" alt="Логотип">
+            <h1 id="Topic1">Кладезь</h1>
+        </div>
+        <nav>
+            <a href="#Topic1">Главная</a>
+            <a href="#Topic2">Новинки</a>
+            <a href="#Contacts">Контакты</a>            
+        </nav>
+        <a href="#" class="arrow-up">
+            <img src="img/arrow_up.png" alt="">
+        </a>
+    </header>
+
+
+    <main>
+        <form action="">
+            <h2>Отзыв о работе магазина</h2>
+            <p>
+                <label for="email">Введите ваш email:</label><br>
+                <input type="email" name="email" id="email" required placeholder="email...">
+            </p>
+            <p>
+                <label for="password" pattern="">Введите пароль:</label><br>
+                <input type="password" name="password" id="password" pattern="^.{6,}$" placeholder="пароль от 6 символов" required>
+            </p>
+            <p>
+                <label for="tel">Введите ваш номер телефона:</label><br>
+                <input type="tel" name="tel" id="tel" placeholder="80000000000" required>
+            </p>
+            <p>
+                <label for="textarea">Введите отзыв:</label><br>
+                <textarea name="feedback" 
+                        id="feedback" 
+                        cols="30" 
+                        rows="10" 
+                        placeholder="Ваш отзыв..."
+                        required 
+                        minlength="10"
+                        maxlength="300"></textarea>
+            </p>
+            <p>
+                <label for="file">Прикрепите фото: (необязательно)</label><br>
+                <input type="file" name="file" id="file" accept=".png, .jpg">
+            </p>
+            <p>
+                <label for="city-select">Выберите пункты описывающие доставку:</label>
+                <br>
+                <select name="city" id="city-select" required multiple size="7">
+                    <option value="">--Выберите пункты</option>
+                    <option value="1">Быстрая</option>
+                    <option value="2">Качественная</option>
+                    <option value="3">Медленная</option>
+                    <option value="4">Вежливое общение курьера</option>
+                    <option value="5">Товар пришел ненадлежащего качества</option>
+                    <option value="6">Курьер был невежлив</option>
+                </select>
+            </p>
+            <p>
+                <label for="checkbox">Опубликовать отзыв?</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </p>
+            <fieldset>
+                <legend>Ваш пол?</legend>
+                <label for="radio">
+                    <input type="radio" name="radio" value="1" checked>
+                    М
+                </label>
+                <label for="radio">
+                    <input type="radio" name="radio" value="1" checked>
+                    Ж
+                </label>
+                <label for="radio">
+                    <input type="radio" name="radio" value="1" checked>
+                    Другое
+                </label>
+            </fieldset>
+            <p>
+                <label for="datetime-local">Введите дату покупки:</label><br>
+                <input type="datetime-local" min="2000-01-01T00:00" max="2030-01-01T00:00">
+            </p>
+            <button type="submit">Отправить</button>
+        </form>
+        <section class="google-map">
+            <h2>Точка самовывоза</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.0957327922497!2d37.47772497934568!3d55.669935400000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54dc1d23b51c3%3A0x74763ed59c81ccb6!2z0KDQotCjINCc0JjQoNCt0JA!5e0!3m2!1sru!2sru!4v1696173953185!5m2!1sru!2sru" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="google-map">
+            <h2>Видео о книгах</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RSffykkToW8?si=YrcdVJD55Q-WcPpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="index.html#Topic1">Вернуться в начало страницы</a>
+            <a href="index.html#Topic2">Вернуться к разделу c новинками</a>    
+        </nav>
+        <section>
+            <h3>Профили магазина в соцсетях</h3>
+            <img src="img/free-icon-youtube-4494485.png" alt="картинка с соцсетями" width="100" height="100" usemap="#youtube">
+            <map name="youtube">
+                <area href="http://youtube.com" target="_blank" shape="circle" coords="50, 50, 50" alt="">
+            </map>
+            <img src="img/free-icon-instagram-2111463.png" alt="картинка с соцсетями" width="100" height="100" usemap="#inst">
+            <map name="inst">
+                <area href="http://instagram.com" target="_blank" shape="rect" coords="0,100,100,0"  alt="">
+            </map>
+            <img src="img/free-icon-facebook-2504903.png" alt="картинка с соцсетями" width="100" height="100" usemap="#facebook">
+            <map name="facebook">
+                <area href="http://facebook.com" target="_blank" shape="poly" coords="0,0,0,100,100,100,100,0" alt="">
+            </map>
+        </section>
+        <hr>
+        <address id="Contacts">
+            <h4>Контакты для связи</h4>
+            <a href="https://vk.com" target="_blank">Вконтакте</a>
+            <a href="tel:88005553535">Позвонить по номеру</a>
+            <a href="mailto:sendemail@gmail.com">Написать письмо на электронную почту</a>
+        </address>
+    </footer>
+</body>
+</html>
