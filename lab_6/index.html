@@ -7,11 +7,14 @@
     <!-- Подключение фавиконки -->
     <link rel="icon" type="image/png" href="img/icons8-закрытая-книга-48.png">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style_btn.css">
+    <link rel="stylesheet" href="cards.css">
     <!-- подключение шрифта -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Social.css">
+    <script src="https://kit.fontawesome.com/47183cb591.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -23,8 +26,21 @@
         <nav>
             <a class="menu__item" href="#">Главная</a>
             <a class="menu__item" href="#Topic2">Новинки</a>
-            <a class="menu__item" href="#Contacts">Контакты</a>            
+            <a class="menu__item" href="#Contacts">Контакты</a>
         </nav>
+        <div class="container-notif">
+            <button class="dropbtn"><img class="notifications-icon" src="img/notifications.png" alt=""></button>
+            <div class="notifications-content">
+                <a href="#">Заказ 9443 оформлен</a>
+                <a href="#">Заказ 9443 доставлен</a>
+                <a href="#">Скидка 250 р. от 2000р.</a>
+            </div>
+            <div class="circle-count-notif">3</div>
+        </div>
+        <div class="user">
+            <button class="userbtn"><a href="login.html"><img class="user-icon" src="img/free-icon-user.png" alt=""></a></button>
+        </div>
+
         
         <!-- бургер меню -->
         <div class="hamburger-menu">
@@ -96,12 +112,82 @@
             </section>
             <section class="popular-products">
                 <h2>Популярные товары</h2>
-                <div>
-                    <article>Книга 1</article>
-                    <article>Книга 2</article>
-                    <article>Книга 3</article>
-                    <article>Книга 4</article>
+                <div class="glassmorphism-cards">
+                    <div class="container">
+                        <div class="box">
+                            <span></span>
+                            <div class="content">
+                                <h2>После банкета</h2>
+                                <p>Любовь и политика. Роман Юкио Мисимы впервые на русском</p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <span></span>
+                            <div class="content">
+                                <h2>Вавилон</h2>
+                                <p>Новый роман Куанг, автора нашумевшей «Опиумной войны»</p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <span></span>
+                            <div class="content">
+                                <h2>Машина различий</h2>
+                                <p>Визионерский шедевр Гибсона и Стерлинга. Классика стимпанка</p>
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="blur-cards">
+                    <div class="container">
+                        <div class="blur-card card-1">
+                            <span>01</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, odit.</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="blur-card card-2">
+                            <span>02</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, odit.</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="blur-card card-3">
+                            <span>03</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, odit.</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="blur-cover"></div>
+                    </div>
+                </div>
+                <div class="light-cards">
+                    <div class="light-card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h1>Заголовок</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni aut laborum deserunt molestias tempora reprehenderit labore consectetur culpa amet.</p>
+                    </div>
+                    <div class="light-card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h1>Заголовок</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni aut laborum deserunt molestias tempora reprehenderit labore consectetur culpa amet.</p>
+                    </div>
+                    <div class="light-card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h1>Заголовок</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni aut laborum deserunt molestias tempora reprehenderit labore consectetur culpa amet.</p>
+                    </div>
+                </div>
+
             </section>
             <section>
                 <h3>Иностранные книжные термины</h3>
@@ -125,29 +211,105 @@
                     <h4>Книга 1</h4>
                     <img src="img/cover.webp" height="150px"alt="">
                     <p>Цена: 600 руб</p>
-                    <span class="btn-cart"><a href="#" >Добавить в корзину</a></span>
+                    <!-- <span class="btn-cart"><a href="#" >Добавить в корзину</a></span> -->
+                    <div id="btn-1">
+                        <a href="#" class="button">
+                            <span class="button__line button__line--top"></span>
+                            <span class="button__line button__line--right"></span>
+                            <span class="button__line button__line--bottom"></span>
+                            <span class="button__line button__line--left"></span>
+                            В корзину
+                        </a>
+                    </div>
+                    <!-- тест -->
                 </article>
                 <article class ="product">
                     <h4>Книга 2</h4>
                     <img src="img/cover2.webp" height="150px"alt="">
                     <p>Цена: 600 руб</p>
-                    <span class="btn-cart"><a href="#" >Добавить в корзину</a></span>
+                    <div id="btn-2">
+                        <a href="#" class="container">
+                            <div class="flipper">
+                                <div class="button front">
+                                    В корзину
+                                </div>
+                                <div class="button back">
+                                    Клик
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </article>
                 <article class ="product">
                     <h4>Книга 3</h4>
                     <img src="img/cover3.webp" height="150px"alt="">
                     <p>Цена: 600 руб</p>
-                    <span class="btn-cart"><a href="#" >Добавить в корзину</a></span>
+                    <div id="btn-3">
+                        <a href="#" class="container">
+                            <div class="button">В корзину</div>
+                        </a>
+                    </div>
                 </article>
                 <article class ="product">
                     <h4>Книга 4</h4>
                     <img src="img/cover4.webp" height="150px"alt="">
                     <p>Цена: 600 руб</p>
-                    <span class="btn-cart"><a href="#" >Добавить в корзину</a></span>
+                    <div id="btn-4">
+                        <a href="#" class="container">
+                            <div class="button">В корзину</div>
+                        </a>
+                    </div>
                 </article>
             </div>
         </aside>
     </main>
+    
+
+
+    <div class="anim-cards">
+        <h3>Лучшие книги Джека Лондона</h3>
+        <div class="anim-card-container">
+            <div class="anim-card">
+                <img src="img/iden-1.webp" alt="">
+                <div class="card-info">
+                    <h3>Мартин Иден</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio quo sunt saepe neque eius!</p>
+                    <a href="#" class="card-btn">Подробнее</a>
+                </div>
+            </div>
+            <div class="anim-card">
+                <img src="img/iden-2.webp" alt="">
+                <div class="card-info">
+                    <h3>Белый клык</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolorem beatae incidunt? Pariatur?</p>
+                    <a href="#" class="card-btn">Подробнее</a>
+                </div>
+            </div>
+            <div class="anim-card">
+                <img src="img/iden-3.webp" alt="">
+                <div class="card-info">
+                    <h3>Странник по звездам</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dicta eveniet reiciendis itaque, voluptatibus laboriosam!</p>
+                    <a href="#" class="card-btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="video-container">
+        <div class="video-wrapper">
+            <div class="video-info">
+                <h3>Видео с библиотекой</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto optio dignissimos alias id eveniet? Consectetur eveniet rem repellat tempore ipsa.</p>
+            </div>
+            <iframe src="https://www.youtube.com/embed/YQc4WT0yDH4?si=3AM8Wn68EXzpcAa5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+
+
 
     <div class="gallery">
         <h3>Галерея</h3>
@@ -156,7 +318,6 @@
             <img src="img/gallery/alif-caesar-rizqi-pratama-loUlSOXL81c-unsplash.jpg" alt="">
             <img src="img/gallery/annelies-geneyn-bhBONc07WsI-unsplash.jpg" alt="">
             <img src="img/gallery/asterisk-kwon-q_gjDWf9ths-unsplash.jpg" alt="">
-            
             <img src="img/gallery/fang-wei-lin-H1IRUS1vEFA-unsplash.jpg" alt="">
             <img src="img/gallery/ioann-mark-kuznietsov-F_cHIM0Kcy4-unsplash.jpg" alt="">
             <img src="img/gallery/janko-ferlic-sfL_QOnmy00-unsplash.jpg" alt="">
@@ -169,38 +330,26 @@
 
 
     <footer>
-        <nav>
+        <!-- <nav>
             <a href="#">Вернуться в начало страницы</a>
             <a href="index.html#Topic2">Вернуться к разделу c новинками</a>    
-        </nav>
-        <section>
-            <h3>Профили магазина в соцсетях</h3>
-            <img src="img/free-icon-youtube-4494485.png" alt="картинка с соцсетями" width="100" height="100" usemap="#youtube">
-            <map name="youtube">
-                <area href="http://youtube.com" target="_blank" shape="circle" coords="50, 50, 50" alt="">
-            </map>
-            <img src="img/free-icon-instagram-2111463.png" alt="картинка с соцсетями" width="100" height="100" usemap="#inst">
-            <map name="inst">
-                <area href="http://instagram.com" target="_blank" shape="rect" coords="0,100,100,0"  alt="">
-            </map>
-            <img src="img/free-icon-facebook-2504903.png" alt="картинка с соцсетями" width="100" height="100" usemap="#facebook">
-            <map name="facebook">
-                <area href="http://facebook.com" target="_blank" shape="poly" coords="0,0,0,100,100,100,100,0" alt="">
-            </map>
-        </section>
-
+        </nav> -->
         <hr>
         <address id="Contacts">
-            <h4>Контакты для связи</h4>
-            <a href="https://vk.com" target="_blank">Вконтакте</a>
-            <a href="tel:88005553535">Позвонить по номеру</a>
-            <a href="mailto:sendemail@gmail.com">Написать письмо на электронную почту</a>
+            <h4 class="social-title">Контакты для связи</h4>
+            <div class="social">
+                <a class="social__icon instagram" href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social__icon vk" href="#">
+                  <i class="fab fa-vk"></i>
+                </a>
+                <a class="social__icon youtube" href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+            </div>
             <a href="response.html">Оставить отзыв</a>
         </address>
-        <section>
-            <p>Cайт разработан с помощью </p>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="img/html.png" alt="Логотип html5" width="100" height="100"></a>
-        </section>
     </footer>
 </body>
 </html>

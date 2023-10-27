@@ -1,0 +1,407 @@
+.glassmorphism-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    background: #FFE4C4;
+}
+.glassmorphism-cards .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+.glassmorphism-cards .container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.3s;
+}
+
+.glassmorphism-cards .container .box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skew(15deg);
+    transition: .3s;
+}
+.glassmorphism-cards .container .box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skew(15deg);
+    filter: blur(30px);
+    transition: .3s;
+}
+.glassmorphism-cards .container .box:hover::after,
+.glassmorphism-cards .container .box:hover::before{
+    transform: skew(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+    transform: .3s;
+    /* filter: blur(20px); */
+}
+.glassmorphism-cards .container .box:nth-child(1)::after,
+.glassmorphism-cards .container .box:nth-child(1)::before{
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+.glassmorphism-cards .container .box:nth-child(2)::after,
+.glassmorphism-cards .container .box:nth-child(2)::before{
+    background: linear-gradient(315deg, #0db3be, #ff0058);
+}
+.glassmorphism-cards .container .box:nth-child(3)::after,
+.glassmorphism-cards .container .box:nth-child(3)::before{
+    background: linear-gradient(315deg, #1eff1e, #0db3be);
+}
+
+.glassmorphism-cards .container .box span{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+.glassmorphism-cards .container .box span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(30px);
+    opacity: 0;
+    animation: animted 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.05);
+}
+.glassmorphism-cards .container .box:hover span::before{
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    transition: 0.3s
+}
+
+.glassmorphism-cards .container .box span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(30px);
+    opacity: 0;
+    animation: animted 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.05);
+}
+.glassmorphism-cards .container .box:hover span::after{
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    transition: 0.3s
+}
+
+@keyframes animted {
+    0%, 100%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+.glassmorphism-cards .container .box .content{
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transition: .5s;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+.glassmorphism-cards .container .box:hover .content{
+    left: -25px;
+    padding: 60px 40px;
+}
+.glassmorphism-cards .container .box .content h2{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+.glassmorphism-cards .container .box .content p{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+.glassmorphism-cards .container .box .content a{
+    display: inline-block;
+    font-size: 1.1em;
+    color: #000;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.blur-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    background: #FFE4C4;
+}
+
+.container{
+    background: #FFE4C4;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30em;
+}
+
+.blur-cards .container .blur-card{
+    height: 20em;
+    width: 15em;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 15px #00000026;
+    z-index: 1;
+    transition: z-index 0.2s step-end, transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+.blur-cards .container .blur-card span{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    padding-top: calc(30% - 1em);
+    margin-bottom: 0.5em;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color:#fff;
+}
+.blur-cards .container .blur-card p{
+    padding: 1em;
+    text-align: center;
+}
+.blur-cards .container .blur-card a{
+    display: block;
+    padding: 1em;
+    margin: 3em;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    justify-self: center;
+}
+.blur-cards .container .card-1 span{
+    background: rgb(255 175 0);
+}
+.blur-cards .container .card-2 span{
+    background: rgb(218 34 106);
+}
+.blur-cards .container .card-3 span{
+    background: rgb(187 2 254);
+}
+.blur-cards .container .card-1 a{
+    background: rgb(255 175 0);
+}
+.blur-cards .container .card-2 a{
+    background: rgb(218 34 106);
+}
+.blur-cards .container .card-3 a{
+    background: rgb(187 2 254);
+}
+.blur-cover{
+    transition: z-index 0.2s step-end, opacity 0.2s linear;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+.blur-card:hover ~.blur-cover{
+    transition: z-index 0.2s step-start, opacity 0.2s linear;
+    z-index: 2;
+    opacity: 1;
+}
+.blur-card:nth-child(1):hover{
+    transition: z-index 0.2s step-start, transform 0.2s ease-in-out;
+    transform: scale(1.1);
+    transition: opacity 0.2s linear;
+    z-index: 3;
+    opacity: 1;
+}
+.blur-card:nth-child(2):hover{
+    transition: z-index 0.2s step-start, transform 0.2s ease-in-out;
+    transform: scale(1.1);
+    transition: z-index 0.2s step-start, opacity 0.2s linear;
+    z-index: 3;
+    opacity: 1;
+}
+.blur-card:nth-child(3):hover{
+    transition: z-index 0.2s step-start, transform 0.2s ease-in-out;
+    transform: scale(1.1);
+    transition: z-index 0.2s step-start, opacity 0.2s linear;
+    z-index: 3;
+    opacity: 1;
+}
+
+
+/* 5 задание */
+.light-cards{
+    background: #FFE4C4;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30em;
+    padding: 2em 0;
+}
+.light-cards .light-card{
+    height: 100%;
+    width: 15em;
+    background-color: #120b3e;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #120b3e;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    filter: brightness(60%);
+}
+
+.light-card p{
+    padding: 1em;
+}
+.light-card span{
+   position: absolute;
+}
+.light-card span:nth-child(1){
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(180deg, rgba(0, 166, 255,1) 0%, rgba(6, 12, 85, 0) 100%); 
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 3px;
+}
+.light-card  span:nth-child(2){
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(270deg, rgba(0, 166, 255,1) 0%, rgba(6, 12, 85, 0) 100%); 
+
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+}
+.light-card  span:nth-child(3){
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(0deg, rgba(0, 166, 255,1) 0%, rgba(6, 12, 85, 0) 100%); 
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 3px;
+}
+.light-card  span:nth-child(4){
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(90deg, rgba(0, 166, 255,1) 0%, rgba(6, 12, 85, 0) 100%); 
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+}
+
+@keyframes line1{
+    from{
+        bottom: -100%;
+    }to{
+        bottom: 100%;
+    }
+}
+@keyframes line2{
+    from{
+        left: -100%;
+    }to{
+        left: 100%;
+    }
+}
+@keyframes line3{
+    from{
+        top: -100%;
+    }to{
+        top: 100%;
+    }
+}
+@keyframes line4{
+    from{
+        right: -100%;
+    }to{
+        right: 100%;
+    }
+}
+
+.light-card:hover{
+    transition: transform 0.2s ease-in-out;
+    z-index: 3;
+    filter: brightness(100%);
+    & span:nth-child(1){
+        animation-name: line1;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+    }
+    & span:nth-child(2){
+        animation-name: line2;
+        animation-delay: 0.2s;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+
+    }
+    & span:nth-child(3){
+        animation-name: line3;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+    }
+    & span:nth-child(4){
+        animation-name: line4;
+        animation-delay: 0.2s;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+    }
+}
