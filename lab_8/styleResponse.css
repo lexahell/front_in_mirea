@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    cursor: default;
+}
+
+.logo img {
+    height: 60px;
+    width: 130px;
+  }
+  .header{
+    background: #27ae60;
+    display: flex;
+    position: sticky;
+    top:0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+  }
+  header .arrow-up{
+    position: fixed;
+    right: 10px;
+    top: 720px
+  }
+  header .arrow-up img{
+    height: 30px;
+    width: 30px;
+  }
+  header nav{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  header nav .menu__item{
+    margin-top: 20px;
+    color: white;
+    font-size: 25px;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+  }
+  header nav .menu__item:hover{
+    color:rgb(231, 201, 165);
+    border:2px solid #696969;
+    border-radius: 10px;
+  }
+  header nav .menu__item:active{
+    background: #219150;
+    font-size: 24px;
+  }
+  header nav .menu__item:visited{
+    font-size: 29px;
+    color:rgb(199, 199, 199);
+  }
+  .user{
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    width: 40px;
+    background-color: #27ae60;
+  }
+  .userbtn{
+    background-color: #27ae60;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .user-icon{
+    width: 28px;
+    height: 28px;
+    background-color: #27ae60;
+  }
+  
+  .container-notif {
+    right:20px;
+    top:0;
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+  }
+  .notifications-icon{
+    width: 28px;
+    height: 28px;
+  
+  }
+  
+  .dropbtn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    background-color: #27ae60;
+    border-radius: 50px;
+  
+  }
+  
+  .notifications-content {
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+  }
+  
+  .notifications-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .circle-count-notif{
+    font-size: 14px;
+    width: 14px;
+    border-radius: 10px;
+    background-color:darkorchid;
+    position:absolute;
+    right:10px;
+    top:30px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .notifications-content a:hover {
+    background-color: #27ee60;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px grey;
+    position: relative;
+    width: calc(100% + 10px);
+    right:5px;
+    top: 0;
+  }
+  
+  
+  .container-notif:hover .notifications-content {
+    display: block;
+    border-radius: 0px 0px 20px 20px;
+    opacity: 1;
+    transition: all 0.5s ease-in 2s;
+  }
+  
+  
+  .container-notif:hover .dropbtn {
+    background-color:#27ee60;
+    border-radius: 20px 20px 0px 0px;
+    width: 200px;
+    transition: all 0.5s ease;
+  }
+  .container-notif:hover .dropbtn img{
+    float:left;
+  }
+  .container-notif:hover .circle-count-notif{
+    right:140px;
+    top:30px;
+    position: absolute;
+  }
+  @media (max-width: 1300px) {
+    html{
+            font-size: 18px;
+    }
+  
+    main{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    main aside{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    }
+    main aside h3{
+        flex-basis: 100%;
+    }
+    main > aside div{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+    .banner{
+        height: 300px;
+        width: 600px;
+    }
+  }
+  
+  .hamburger-menu{
+    display: none;
+  }
+  @media (max-width: 826px) {
+    .pattern-left{
+        display: none;
+    }
+    .header-nav{
+        display: none;
+    }
+    .hamburger-menu{
+        display:initial;
+    }
+    #menu__toggle {
+        opacity: 0;
+    }
+    .menu__btn {
+        display: flex; 
+        align-items: center;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        width: 36px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1;
+    }
+  
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: black;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    /* контейнер меню */
+    .menu__box {
+        
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 91px;
+        width: 100%;
+        height: 100%;
+        padding-top: 80px;    
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+        background-color: rgb(255 255 255 / 0.9);
+    }
+    .menu__box li{
+        left: 0;    
+    }
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+  
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0; 
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0; 
+        right: 0;   
+    }
+    .container-notif{
+        margin-right: 40px;
+    }
+    .user{
+        margin-right: 40px;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    html{
+        font-size: 20px;
+    }   
+    .dropbtn{
+      margin-top: 10px;
+    }
+    .user{
+      top: 30px;
+    }
+    .logo{
+        font-size: 15px;
+    }
+    .logo img{
+        height:50px;
+        width:100px; 
+    }
+    .menu__btn {
+      top: 20px;
+    }
+  
+  
+    main aside div{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pattern-right{
+        display: none;
+    }
+    .product{
+        width: 60%;
+    }
+    .banner{
+        height: 200px;
+        width: 100%;
+    }
+  }  
+main{
+    display: flex;
+}
+
+.btn-cart{
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px;
+    margin-top: 5px;
+}
+.btn-cart a{
+    margin-top: 5px;
+    text-decoration: none;
+    color:white;
+}
+
+.btn-close{
+
+    position: absolute;
+    right: 5px;
+    top:105px;
+}
+.btn-close img{
+    width: 20px;
+    height: 20px;
+}
+
+footer{
+    background-color: #27ae60;
+    padding:10px 20px;
+}
+footer section img{
+    margin-top: 5px;
+}
+
+/* добавление стилей для 4 */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: snow;
+}
+.container{
+    width: 80%;
+    padding: 20px;
+}
+.container h2{
+    width: 100%;
+    color: #27ae60;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.container .row100 .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #27ae60;
+}
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+.container .row100 .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #27ae60;    
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+}
+.container .row100 .inputBox.textarea{
+    position: relative;
+    width:100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .inputBox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text{
+   top: -35px;
+   left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line{
+   height: 100%;
+}
+input[type="submit"]{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    background: #27ae60;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px ;
+}
+
+@media(max-width: 360px){
+    .container .row100 .inputBox{
+        width:200px;
+    }
+    .container .row100 .inputBox.textarea .line,
+    .container .row100 .inputBox.textarea .text{
+        width: 200px;
+    }
+    .container .row100 .col{
+        width: 200px;
+    }
+
+}
