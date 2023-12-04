@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Сортировка элементов</title>
+  <link rel="stylesheet" href="sort.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Сортировка элементов</h1>
+    <div class="buttons">
+      <button onclick="sortAscending()">Сортировать по возрастанию</button>
+      <button onclick="sortDescending()">Сортировать по убыванию</button>
+    </div>
+
+    <div id="sortableContainer" class="sortable-container">
+      <div class="rec-item">
+        <h3>Книга 1</h3>
+        <img src="../img/book-1.webp" alt="">
+        <p class="price">100руб</p>
+        <button id="rec-1">Добавить в корзину</button>
+    </div>
+    <div class="rec-item">
+        <h3>Книга 2</h3>
+        <img src="../img/book-5.jpg" alt="">
+        <p class="price">400 руб</p>
+        <button id="rec-2">Добавить в корзину</button>
+    </div>                    
+    <div class="rec-item">
+        <h3>Книга 3</h3>
+        <img src="../img/book-6.jpg" alt="">
+        <p class="price">900 руб</p>
+        <button id="rec-3">Добавить в корзину</button>
+    </div>
+    <div class="rec-item">
+      <h3>Книга 4</h3>
+      <img src="../img/book-2.jpg" alt="">
+      <p class="price">444 руб</p>
+      <button id="rec-4">Добавить в корзину</button>
+  </div>
+    </div>
+  </div>
+
+  <script src="sort.js"></script>
+</body>
+</html>

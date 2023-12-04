@@ -1,0 +1,281 @@
+#btn-1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: #ffe4c4;
+  border-radius: 10px;
+}
+
+#btn-1 .button {
+  height: 100%;
+  background-color: #333;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  padding: 11px 15px 15px 15px;
+  color: #39ff14;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+#btn-1 .button__line {
+  position: absolute;
+  display: block;
+}
+#btn-1 .button__line--top {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #39ff14);
+}
+#btn-1 .button:hover .button__line--top {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#btn-1 .button__line--bottom {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, #39ff14);
+}
+#btn-1 .button:hover .button__line--bottom {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#btn-1 .button__line--left {
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(0deg, transparent, #39ff14);
+}
+#btn-1 .button:hover .button__line--left {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#btn-1 .button__line--right {
+  right: 0;
+  top: -100%;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, #39ff14);
+}
+#btn-1 .button:hover .button__line--right {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#btn-1 .button:hover {
+  box-shadow: 0 0 10px #39ff14;
+  background-color: #39ff14;
+  color: #333;
+  transition-delay: 1s;
+}
+#btn-1 .button:active {
+  background-color: green;
+  transition-delay: 0.01s;
+}
+#btn-2 {
+  font-size: 16px;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: #ffe4c4;
+  border-radius: 5px;
+}
+
+#btn-2 .container {
+  display: inline-block;
+  height: 100%;
+  width: 150px;
+  cursor: pointer;
+  perspective: 1000;
+}
+
+#btn-2 .front,
+#btn-2 .back {
+  background: linear-gradient(45deg, #308321, #3ed124);
+}
+#btn-2 .flipper:hover {
+  transform: rotateX(-90deg);
+}
+#btn-2 .flipper {
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: 100% 20px;
+}
+#btn-2 .button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #fff;
+  letter-spacing: 2px;
+}
+#btn-2 .front {
+  text-shadow: 1px 0 2px #000;
+  transform: translateZ(18.5px);
+}
+#btn-2 .back {
+  text-shadow: 1px 0 2px #000;
+  transform: rotateX(90deg) translateZ(18.5px);
+}
+
+#btn-2 .back:active {
+  color: #39ff14;
+}
+
+#btn-3 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #ffe4c4;
+    border-radius: 10px;
+}
+#btn-3 .container {
+    height: 100%;
+    background-color: #3ed124;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    padding: 11px 15px 15px 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+#btn-3 .button{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#btn-3 .container:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    width: 1.5em;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+    transform: translateX(-3em);
+}
+#btn-3 .container:hover:before{
+    animation: move-light;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease;
+}
+
+@keyframes move-light{
+    from{
+        transform: translateX(-3em) skewX(-45deg);
+    }
+    to{
+        transform: translateX(10em) skewX(-45deg);
+    }
+}
+
+
+#btn-4 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #ffe4c4;
+    border-radius: 10px;
+}
+#btn-4 .container {
+    height: 100%;
+    background-color: #3ed124;
+    border-radius: 0px;
+    position: relative;
+    display: inline-block;
+    padding: 11px 15px 15px 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#btn-4 .container:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #39ff14;
+}
+#btn-4 .container::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #39ff14
+}
+#btn-4 .container.container:hover{
+    border-radius: 0px;
+    background-color: #ffe4c4;
+    color: #39ff14;
+    font-weight: bold;
+    background-color: #fff;
+}
+#btn-4 .container.container:hover:before {
+    width: 100%;
+    transition-delay: 0.2s;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+#btn-4 .container.container:hover:after {
+    width: 100%;
+    transition-delay: 0.2s;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+

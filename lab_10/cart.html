@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Корзина</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    .item {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .item h3 {
+      margin-top: 0;
+    }
+
+    button {
+      padding: 8px 12px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #cart {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+    }
+
+    #cart h2 {
+      margin-top: 0;
+    }
+
+    #cart-items {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #cart-total {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Магазин</h1>
+  </header>
+
+  <div class="container">
+    <div class="item" data-id="1">
+      <h3>Товар 1</h3>
+      <p>Цена: $10</p>
+      <button onclick="addToCart(1)">Добавить в корзину</button>
+    </div>
+    <div class="item" data-id="2">
+      <h3>Товар 2</h3>
+      <p>Цена: $20</p>
+      <button onclick="addToCart(2)">Добавить в корзину</button>
+    </div>
+    <div class="item" data-id="3">
+      <h3>Товар 3</h3>
+      <p>Цена: $15</p>
+      <button onclick="addToCart(3)">Добавить в корзину</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="cart">
+      <h2>Корзина</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Итого: $0</p>
+    </div>
+  </div>
+
+  <script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(itemId) {
+      const itemExists = cart.find(item => item.id === itemId);
+      if (itemExists) {
+        itemExists.quantity++;
+      } else {
+        cart.push({ id: itemId, quantity: 1 });
+      }
+
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItemsElement = document.getElementById('cart-items');
+      cartItemsElement.innerHTML = '';
+
+      total = 0;
+
+      cart.forEach(item => {
+        const itemInfo = getItemInfo(item.id);
+        const itemTotal = itemInfo.price * item.quantity;
+        total += itemTotal;
+
+        const li = document.createElement('li');
+        li.textContent = `${itemInfo.name} x ${item.quantity} - $${itemTotal}`;
+        cartItemsElement.appendChild(li);
+      });
+
+      const cartTotalElement = document.getElementById('cart-total');
+      cartTotalElement.textContent = `Итого: $${total}`;
+    }
+
+    function getItemInfo(itemId) {
+      const items = {
+        1: { name: 'Товар 1', price: 10 },
+        2: { name: 'Товар 2', price: 20 },
+        3: { name: 'Товар 3', price: 15 }
+      };
+      return items[itemId];
+    }
+  </script>
+</body>
+</html>
