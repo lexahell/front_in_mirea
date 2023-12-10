@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кладезь</title>
+    <!-- Подключение фавиконки -->
+    <link rel="icon" type="image/png" href="img/icons8-закрытая-книга-48.png">
+    <link rel="stylesheet" href="styleResponse.css">
+    <!-- подключение шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Social.css">
+    <script src="https://kit.fontawesome.com/47183cb591.js" crossorigin="anonymous"></script>
+    <script src="center.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/chest-gold-svgrepo-com.svg"  alt="Логотип">
+            <h1 id="Topic1">Кладезь</h1>
+        </div>
+        
+        <nav class="header-nav">
+            <a class="menu__item" href="index.html">Главная</a>
+            <a class="menu__item" href="cart/cart.html">Корзина</a>
+            <a class="menu__item" href="response.html">Контакты</a>
+        </nav>
+        <div class="container-notif">
+            <button class="dropbtn"><img class="notifications-icon" src="img/notifications.png" alt=""></button>
+            <div class="notifications-content">
+                <a href="#">Заказ 9443 оформлен</a>
+                <a href="#">Заказ 9443 доставлен</a>
+                <a href="#">Скидка 250 р. от 2000р.</a>
+            </div>
+            <div class="circle-count-notif">3</div>
+        </div>
+        <div class="user">
+            <button class="userbtn"><a href="login.html"><img class="user-icon" src="img/free-icon-user.png" alt=""></a></button>
+        </div>
+
+        
+        <!-- бургер меню -->
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="index.html">Главная</a></li>
+                <li><a class="menu__item" href="cart/cart.html">Корзина</a></li>
+                <li><a class="menu__item" href="response.html">Контакты</a> </li>
+            </ul>
+        </div>
+      </header>
+
+    <!-- <div class="container-center" style="width:500px">
+        <img src="./img/gallery/annelies-geneyn-bhBONc07WsI-unsplash.jpg" height="300px" width="300px" class="img-center" alt="">
+    </div> -->
+    <main>
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="" required>
+                        <span class="text">Имя</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="" required>
+                        <span class="text">Фамилия</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="" required>
+                        <span class="text">Email</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="" required>
+                        <span class="text">Номер телефона</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <textarea name="" id="" cols="30" rows="10" required="required"></textarea>
+                        <span class="text">Напиши своё сообщение сюда...</span>
+                        <span class="line"></span>
+                    </div> 
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="Отправить">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- <nav>
+        
+            <a href="#">Вернуться в начало страницы</a>
+            <a href="index.html#Topic2">Вернуться к разделу c новинками</a>    
+        </nav> -->
+        <hr>
+        <address id="Contacts">
+            <h4 class="social-title">Контакты для связи</h4>
+            <div class="social">
+                <a class="social__icon instagram" href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social__icon vk" href="#">
+                  <i class="fab fa-vk"></i>
+                </a>
+                <a class="social__icon youtube" href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <a href="response.html">Оставить отзыв</a>
+        </address>
+    </footer>
+</body>
+</html>

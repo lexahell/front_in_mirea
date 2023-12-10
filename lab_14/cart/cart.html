@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../Social.css">
+        <link rel="stylesheet" href="../style_btn.css">
+        <link rel="stylesheet" href="cart.css">
+        <script src="https://kit.fontawesome.com/47183cb591.js" crossorigin="anonymous"></script>
+        <script src="../like.js" defer></script>
+        <script src="cart.js" defer></script>
+        <!-- <script src="../filter/filter.js" defer></script> -->
+    </head>
+
+<body>
+    <div class="container"> 
+        <header class="header">
+            <div class="logo">
+                <img src="../img/chest-gold-svgrepo-com.svg"  alt="Логотип">
+                <h1 id="Topic1">Кладезь</h1>
+            </div>
+            
+            <nav class="header-nav">
+                <a class="menu__item" href="../index.html">Главная</a>
+                <a class="menu__item" href="#">Корзина</a>
+                <a class="menu__item" href="../response.html">Контакты</a>
+            </nav>
+            <div class="container-notif">
+                <button class="dropbtn"><img class="notifications-icon" src="../img/notifications.png" alt=""></button>
+                <div class="notifications-content">
+                    <a href="#">Заказ 9443 оформлен</a>
+                    <a href="#">Заказ 9443 доставлен</a>
+                    <a href="#">Скидка 250 р. от 2000р.</a>
+                </div>
+                <div class="circle-count-notif">3</div>
+            </div>
+            <div class="user">
+                <button class="userbtn"><a href="../login.html"><img class="user-icon" src="../img/free-icon-user.png" alt=""></a></button>
+            </div>
+
+        
+        <!-- бургер меню -->
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="../index.html">Главная</a></li>
+                    <li><a class="menu__item" href="#">Корзина</a></li>
+                    <li><a class="menu__item" href="../response.html">Контакты</a> </li>
+                </ul>
+            </div>
+        </header>
+
+
+
+        <main>
+            <h2>Корзина</h2>
+            <div class="cart-container">
+                <h3>Список товаров</h3>
+                <div id="products" class="products area-for-products">
+                    <div id="product-1" draggable="true" data-price="700" class="cart-item">
+                        <div class="title-and-image">
+                            <img src="../img/book-1.jpg" alt="">
+                            <p class="title">Исскуство любить</p>
+                        </div>
+                        <div>
+                            <p class="total-cost">700 руб</p>
+                            <!-- <h4>Количество</h4>
+                            <div class="count-container">
+                                <button class="count-minus">-</button>
+                                <p class="count">1</p>
+                                <button class="count-plus">+</button>
+                            </div> -->
+                        </div>
+                        <!-- <button class="remove-cart-item">X</button> -->
+                    </div>
+                    <div id="product-2" draggable="true" data-price="500" class="cart-item">
+                        <div class="title-and-image">
+                            <img src="../img/book-4.jpg" alt="">
+                            <p class="title">Ловец снов</p>
+                        </div>
+                            <div>
+                            <p class="total-cost">500 руб</p>
+                            <!-- <h4>Количество</h4>
+                            <div class="count-container">
+                                <button class="count-minus">-</button>
+                                <p class="count">1</p>
+                                <button class="count-plus">+</button>
+                            </div> -->
+                        </div>
+                        <!-- <button class="remove-cart-item">X</button> -->
+                    </div>                  
+                    <div id="product-3" draggable="true" data-price="1000" class="cart-item">
+                        <div class="title-and-image">
+                            <img src="../img/book-3.jpg" alt="">
+                            <p class="title">Самурай без меча</p>
+                        </div>
+                            <div>
+                            <p class="total-cost">1000 руб</p>
+                            <!-- <h4>Количество</h4>
+                            <div class="count-container">
+                                <button class="count-minus">-</button>
+                                <p class="count">1</p>
+                                <button class="count-plus">+</button>
+                            </div> -->
+                        </div>
+                        <!-- <button class="remove-cart-item">X</button> -->
+                    </div>             
+                    <div id="product-4" draggable="true" data-price="200" class="cart-item">
+                        <div class="title-and-image">
+                            <img src="../img/book-2.jpg" alt="">
+                            <p class="title">Сказать жизни да</p>
+                        </div>
+                            <div>
+                            <p class="total-cost">200 руб</p>
+                            <!-- <h4>Количество</h4>
+                            <div class="count-container">
+                                <button class="count-minus">-</button>
+                                <p class="count">1</p>
+                                <button class="count-plus">+</button>
+                            </div> -->
+                        </div>
+                        <!-- <button class="remove-cart-item">X</button> -->
+                    </div> 
+                </div>
+                <div class="cart-submit-container">
+                    <div class="area-for-products">
+
+                    </div>
+                    <h3 class="total">Итого: 2400 руб</h3>
+                    <button class="btn-order">Перейти к оформлению</button>
+                    <!-- <button class="clear-cart">Очистить картину</button> -->
+                </div>
+            </div>
+        </main>
+
+
+
+
+
+        <!-- <footer class="footer">
+            <div class="container">
+                    <div class="sec aboutus">
+                        <h2>About Us</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, odit quos! Sapiente laboriosam suscipit autem neque beatae non officia minima.</p>
+                        <div class="social">
+                            <a class="social__icon instagram" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="social__icon vk" href="#">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a class="social__icon youtube" href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                <div class="sec quicklinks support">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="sec quicklinks shop">
+                    <h2>Shop</h2>
+                    <ul>
+                        <li><a href="#">Man</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Merch</a></li>
+                    </ul>
+                </div>    
+                <div class="sec contact">
+                    <h2>Contact Us</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i></span><p><a href="tel:+89999999999">+8 999 999 9999</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-envelope"></i><a href="mailto:pochta@mail.ru">pochta@mail.ru</a></span>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+        </footer> -->
+    </div>
+</body>
+
+</html>

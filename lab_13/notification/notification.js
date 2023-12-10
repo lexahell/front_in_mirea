@@ -48,6 +48,8 @@ startNotificationInterval();
 
 
 
+
+
 containerNotification.addEventListener('click', (event)=>{
   if(event.target.classList.contains("delete-notif")){
     event.target.parentElement.remove();

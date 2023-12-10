@@ -1,6 +1,4 @@
 function centerElement(event) {
-    var windowWidth = window.innerWidth;
-    var windowtHeight = window.innerHeight;
     var clickX = event.clientX;
     var clickY = event.clientY;
     alert("x = " + clickX + "px " +"у = " + clickY + "px");
