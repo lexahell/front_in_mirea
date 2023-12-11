@@ -24,6 +24,7 @@ btnAddLi.addEventListener('click', () => {
     listItem.textContent = userInput;
 
 
+    
     const text = userInput;
     const textContainer = listItem;
     
