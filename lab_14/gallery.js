@@ -5,7 +5,7 @@ SmallImgs.addEventListener('click', function (event) {
     let targetElement = event.target;
     if (targetElement !== this && targetElement){
         BigImg.style.opacity = "0";
-        BigImg.src = targetElement.src;
+        BigImg.src =    targetElement.src;
         let i = 0;
         let interval = setInterval(()=>{
             if (i >= 1){

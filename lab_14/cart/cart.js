@@ -48,7 +48,6 @@ dropZones.forEach(dropZone =>{
     function handlerDragdrop(event){
         const dragFlag = event.dataTransfer.getData('dragItem');
         const dragItem = document.querySelector(`#${dragFlag}`)
-        console.log('dragdrop', this);
         this.append(dragItem);
         renderCart();
     }

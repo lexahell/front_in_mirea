@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function(){
         if (event.ctrlKey || event.metaKey){
             targetElement.classList.add('selected');
         }else {
-        for (const listItem of listItems) {
-            listItem.classList.remove('selected');
-          }
-        targetElement.classList.add('selected');
+          for (const listItem of listItems) {
+              listItem.classList.remove('selected');
+            }
+          targetElement.classList.add('selected');
         }
         event.preventDefault();
     });

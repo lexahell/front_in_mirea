@@ -3,7 +3,7 @@ let thumb = slider.querySelector('.thumb');
 thumb.onmousedown = function(event) {
     event.preventDefault();
 
-    let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+    let shiftX   = event.clientX - thumb.getBoundingClientRect().left;
 
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);

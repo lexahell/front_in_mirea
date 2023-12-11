@@ -24,7 +24,7 @@ btnAddLi.addEventListener('click', () => {
     listItem.textContent = userInput;
 
 
-    
+    ///////////////////////
     const text = userInput;
     const textContainer = listItem;
     
@@ -43,6 +43,7 @@ btnAddLi.addEventListener('click', () => {
     }
     // Запустить анимацию набора текста
     animationFrame = requestAnimationFrame(animateText);
+    //////////////////////
 });
 
 
